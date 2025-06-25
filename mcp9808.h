@@ -9,8 +9,9 @@ typedef struct {
     mcp9808_interface_t interface;
 } mcp9808_t;
 
-mcp9808_err_t
-mcp9808_initialize(mcp9808_t* mcp9808, mcp9808_config_t const* config, mcp9808_interface_t const* interface);
+mcp9808_err_t mcp9808_initialize(mcp9808_t* mcp9808,
+                                 mcp9808_config_t const* config,
+                                 mcp9808_interface_t const* interface);
 mcp9808_err_t mcp9808_deinitialize(mcp9808_t* mcp9808);
 
 mcp9808_err_t mcp9808_get_temp_data_scaled(mcp9808_t const* mcp9808, float32_t* scaled);
@@ -31,11 +32,13 @@ mcp9808_err_t mcp9808_set_t_crit_reg(mcp9808_t const* mcp9808, mcp9808_t_crit_re
 
 mcp9808_err_t mcp9808_get_t_ambient_reg(mcp9808_t const* mcp9808, mcp9808_t_ambient_reg_t* reg);
 
-mcp9808_err_t mcp9808_get_manufacturer_id_reg(mcp9808_t const* mcp9808, mcp9808_manufacturer_id_reg_t* reg);
+mcp9808_err_t mcp9808_get_manufacturer_id_reg(mcp9808_t const* mcp9808,
+                                              mcp9808_manufacturer_id_reg_t* reg);
 
 mcp9808_err_t mcp9808_get_device_id_reg(mcp9808_t const* mcp9808, mcp9808_device_id_reg_t* reg);
 
 mcp9808_err_t mcp9808_get_resolution_reg(mcp9808_t const* mcp9808, mcp9808_resolution_reg_t* reg);
-mcp9808_err_t mcp9808_set_resolution_reg(mcp9808_t const* mcp9808, mcp9808_resolution_reg_t const* reg);
+mcp9808_err_t mcp9808_set_resolution_reg(mcp9808_t const* mcp9808,
+                                         mcp9808_resolution_reg_t const* reg);
 
 #endif // MCP9808_MCP9808_H
