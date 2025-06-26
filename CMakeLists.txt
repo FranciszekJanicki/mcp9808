@@ -4,10 +4,8 @@ target_sources(mcp9808 PRIVATE
     "mcp9808.c"
 )
 
-target_include_directories(mcp9808 PUBLIC 
-)
-
-target_link_libraries(mcp9808 PRIVATE
+target_include_directories(mcp9808 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(mcp9808 PUBLIC
