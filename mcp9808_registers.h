@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     uint8_t t_hyst : 2;
     uint8_t shdn : 1;
@@ -47,5 +51,9 @@ typedef struct {
 typedef struct {
     uint8_t resolution : 2;
 } mcp9808_resolution_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // MCP9808_MCP9808_REGISTERS_H

@@ -5,6 +5,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define MCP9808_DEFAULT_DEVICE_ID 0x04
 #define MCP9808_DEFAULT_MANUFACTURER_ID 0x0054
 #define MCP9808_DEFAULT_DEVICE_REVISION 0x00
@@ -126,5 +130,9 @@ inline float32_t mcp9808_resolution_to_scale(mcp9808_resolution_t resolution)
             return 0.0F;
     }
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // MCP9808_MCP9808_CONFIG_H

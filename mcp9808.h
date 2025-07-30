@@ -4,6 +4,10 @@
 #include "mcp9808_config.h"
 #include "mcp9808_registers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     mcp9808_config_t config;
     mcp9808_interface_t interface;
@@ -53,5 +57,9 @@ mcp9808_err_t mcp9808_get_resolution_reg(mcp9808_t const* mcp9808,
                                          mcp9808_resolution_reg_t* reg);
 mcp9808_err_t mcp9808_set_resolution_reg(mcp9808_t const* mcp9808,
                                          mcp9808_resolution_reg_t const* reg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // MCP9808_MCP9808_H
